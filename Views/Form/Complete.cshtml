@@ -1,0 +1,39 @@
+﻿@model zadanie.Models.Data
+
+
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+        <div class="alert alert-success">@Model.SuccessMessage</div>
+}
+
+<div class="form-group">
+    <label asp-for="FirstName">Imię:</label>
+    <p>@Model.FirstName</p>
+</div>
+
+<div class="form-group">
+    <label asp-for="Surname">Nazwisko:</label>
+    <p>@Model.Surname</p>
+</div>
+
+<div class="form-group">
+    <label asp-for="Email">Adres e-mail:</label>
+    <p>@Model.Email</p>
+</div>
+
+<div class="form-group">
+    <label asp-for="PhoneNum">Nr telefonu:</label>
+    <p>@Model.PhoneNum</p>
+</div>
+
+<div class="form-group">
+    <label asp-for="Age">Wiek:</label>
+    <p>@Model.Age</p>
+</div>
+
+<div class="form-group">
+    <label asp-for="City">Miasto:</label>
+    <p>@Model.City</p>
+</div>
+
+<a asp-action="Form" asp-controller="Form" class="btn btn-primary">Powrót do Formularza</a>
